@@ -1,55 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Resources Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Cấu trúc công ty</title>
     <style>
         body {
-            padding-top: 56px;
+            font-family: Arial, sans-serif;
         }
         .sidebar {
-            height: 100%;
             width: 250px;
+            background-color: #f2f2f2;
+            padding: 10px;
             position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #343a40;
-            padding: 20px;
-            color: #fff;
+            height: 100%;
+            border-right: 1px solid #ddd;
         }
-        .sidebar a {
-            color: #fff;
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
             text-decoration: none;
-            padding: 10px 0;
+            color: #333;
             display: block;
+            padding: 5px;
+            border-radius: 3px;
         }
-        .sidebar a:hover {
-            background-color: #495057;
+        .sidebar ul li a:hover {
+            background-color: #ddd;
+        }
+        .header {
+            padding: 10px;
+            background-color: #0078d7;
+            color: white;
+            text-align: center;
         }
         .content {
-            margin-left: 250px;
+            margin-left: 270px;
             padding: 20px;
+        }
+        .company-structure {
+            font-size: 18px;
+        }
+        .company-structure ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .company-structure ul ul {
+            margin-left: 20px;
+        }
+        .company-structure li {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>Cấu trúc công ty</h1>
+    </div>
     <div class="sidebar">
-        <h4>HR Dashboard</h4>
-        <a href="#dashboard">Dashboard</a>
-        <a href="#employees">Employees</a>
-        <a href="#departments">Departments</a>
-        <a href="#reports">Reports</a>
-        <a href="#settings">Settings</a>
+        <ul>
+            <li><a href="#">Cấu trúc công ty</a></li>
+            <li><a href="#">Cập nhật thông tin</a></li>
+            <li><a href="#">Gửi mail</a></li>
+            <li><a href="#">Quản lý chi nhánh</a></li>
+            <li><a href="#">Quản lý phòng ban</a></li>
+            <li><a href="#">Thông kê tiền lương</a></li>
+        </ul>
     </div>
     <div class="content">
-        <h1>Welcome to the HR Dashboard</h1>
-        <p>Manage your employees, departments, and reports here.</p>
-        <!-- Add more content here -->
+        <div class="company-structure">
+            <ul>
+                <li>Chi nhánh Hà Nội
+                    <ul>
+                        <li>Phòng Kế Toán
+                            <ul>
+                                <li>Nhóm Kế Toán A</li>
+                                <li>Nhóm Kế Toán B</li>
+                            </ul>
+                        </li>
+                        <li>Phòng Kinh Doanh</li>
+                        <li>Phòng Nhân Sự</li>
+                    </ul>
+                </li>
+                <li>Chi nhánh Đà Nẵng
+                    <ul>
+                        <li>Phòng Kỹ Thuật</li>
+                        <li>Phòng Quản Lý Chất Lượng</li>
+                        <li>Phòng Vận Hành</li>
+                    </ul>
+                </li>
+                <li>Chi nhánh Hồ Chí Minh
+                    <ul>
+                        <li>Phòng Marketing</li>
+                        <li>Phòng Hành Chính</li>
+<li>Phòng Pháp Lý</li>
+                    </ul>
+                </li>
+                <li>Chi nhánh Cần Thơ</li>
+            </ul>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

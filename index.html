@@ -3,77 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cấu trúc công ty</title>
+    <title>Giao Diện Quản Lý Nhân Sự</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
         }
         .sidebar {
             width: 250px;
-            background-color: #f2f2f2;
-            padding: 10px;
+            background-color: #343a40;
+            padding: 20px;
             position: fixed;
             height: 100%;
             border-right: 1px solid #ddd;
         }
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .sidebar ul li {
-            margin: 10px 0;
-        }
-        .sidebar ul li a {
+        .sidebar a {
             text-decoration: none;
-            color: #333;
+            color: #fff;
             display: block;
-            padding: 5px;
-            border-radius: 3px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        .sidebar ul li a:hover {
-            background-color: #ddd;
+        .sidebar a:hover {
+            background-color: #495057;
         }
         .header {
-            padding: 10px;
+            padding: 20px;
             background-color: #0078d7;
             color: white;
             text-align: center;
+            position: fixed;
+            width: calc(100% - 250px);
+            left: 250px;
+            top: 0;
+            z-index: 1000;
         }
         .content {
             margin-left: 270px;
             padding: 20px;
+            margin-top: 80px;
         }
         .company-structure {
-            font-size: 18px;
+            font-size: 16px;
         }
         .company-structure ul {
             list-style-type: none;
-            padding-left: 20px;
+            padding-left: 0;
         }
         .company-structure ul ul {
             margin-left: 20px;
+            padding-left: 20px;
+            border-left: 2px solid #0078d7;
         }
         .company-structure li {
             margin: 5px 0;
+        }
+        .company-structure li::before {
+            content: "• ";
+            color: #0078d7;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: calc(100% - 250px);
+            left: 250px;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Cấu trúc công ty</h1>
+        <h1>Cấu Trúc Công Ty</h1>
     </div>
     <div class="sidebar">
-        <ul>
-            <li><a href="#">Cấu trúc công ty</a></li>
-            <li><a href="#">Cập nhật thông tin</a></li>
-            <li><a href="#">Gửi mail</a></li>
-            <li><a href="#">Quản lý chi nhánh</a></li>
-            <li><a href="#">Quản lý phòng ban</a></li>
-            <li><a href="#">Thông kê tiền lương</a></li>
-        </ul>
+        <h4 class="text-white">Menu</h4>
+        <a href="#">Cấu trúc công ty</a>
+        <a href="#">Cập nhật thông tin</a>
+        <a href="#">Gửi mail</a>
+        <a href="#">Quản lý chi nhánh</a>
+        <a href="#">Quản lý phòng ban</a>
+        <a href="#">Thống kê tiền lương</a>
     </div>
     <div class="content">
         <div class="company-structure">
+            <h3>Danh Sách Chi Nhánh</h3>
             <ul>
                 <li>Chi nhánh Hà Nội
                     <ul>
@@ -98,12 +118,15 @@
                     <ul>
                         <li>Phòng Marketing</li>
                         <li>Phòng Hành Chính</li>
-<li>Phòng Pháp Lý</li>
+                        <li>Phòng Pháp Lý</li>
                     </ul>
                 </li>
                 <li>Chi nhánh Cần Thơ</li>
             </ul>
         </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Công Ty ABC - Bản quyền thuộc về công ty</p>
     </div>
 </body>
 </html>

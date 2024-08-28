@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Nhân Sự</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('a.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            color: #4CAF50;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-right .welcome {
+            font-size: 16px;
+            margin-right: 20px;
+        }
+
+        .top-right .datetime {
+            font-size: 14px;
+            margin-right: 20px;
+        }
+
+        .top-right .exit-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .top-right .exit-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .container {
+            width: calc(8   0% - 50px);
+            margin: 180px ;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            width: 48%;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group select {
+            background-color: #fff;
+        }
+
+        .form-group input[type="date"] {
+            padding-right: 30px;
+        }
+
+        .buttons {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background-color: #45a049;
+        }
+
+        .buttons button.cancel {
+            background-color: #f44336;
+        }
+
+        .buttons button.cancel:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <br>
+            <br>
+
+            <br>
+            <li><a href="#">Cấu trúc công ty</a></li>
+            <br>
+            <li><a href="#">Cập nhật thông tin</a></li>
+            <br>
+            <li><a href="#">Gửi mail</a></li>
+            <br>
+            <li><a href="#">Quản lý chi nhánh</a></li>
+            <br>
+            <li><a href="#">Quản lý phòng ban</a></li>
+            <br>
+            <li><a href="#">Quản lý nhân sự</a></li>
+            <br>
+            <li><a href="#">Thống kê</a></li>
+            <br>
+            <li><a href="#">Tiền lương</a></li>
+        </ul>
+    </div>
+    <div class="top-right">
+        <div class="welcome">Xin chào, Quản trị viên</div>
+        <div class="datetime">Ngày: 27/08/2024, Giờ: 14:30</div>
+        <button class="exit-btn">
+            <img src="exit.jpeg" alt="Thoát">
+        </button>
+    </div>
+    <div class="container">
+        <h2>Phần Mềm Quản Lý Nhân Sự</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ và tên nhân viên" required>
+            </div>
+            <div class="form-group">
+                <label for="employee_id">Mã nhân viên:</label>
+                <input type="text" id="employee_id" name="employee_id" placeholder="Nhập mã nhân viên" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Phòng ban:</label>
+                <select id="department" name="department">
+                    <option value="hr">Nhân sự</option>
+                    <option value="it">Công nghệ thông tin</option>
+                    <option value="finance">Tài chính</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="position">Chức vụ:</label>
+                <input type="text" id="position" name="position" placeholder="Nhập chức vụ" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+            </div>
+            <div class="form-group">
+                <label for="start_date">Ngày vào làm:</label>
+                <input type="date" id="start_date" name="start_date" required>
+            </div>
+            <div class="form-group">
+                <label for="salary">Mức lương:</label>
+                <input type="number" id="salary" name="salary" placeholder="Nhập mức lương" required>
+            </div>
+            <div class="buttons">
+                <button type="submit">Lưu</button>
+                <button type="reset" class="cancel">Hủy</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
